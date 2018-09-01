@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Main Header">
+      <UniqueIdentifier>{31c77a8b-f8ee-4695-acb0-833089010c8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".h files">
+      <UniqueIdentifier>{555b8db0-d6f5-4d17-8cbd-8901512a46f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".cpp files">
+      <UniqueIdentifier>{ce701423-9c69-4804-8643-80078d90160c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".h files\Generators">
+      <UniqueIdentifier>{9fe2c918-402b-4b42-bb8b-51da51b9b644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".h files\Simulation objects">
+      <UniqueIdentifier>{ad74a381-24f4-4c6b-950e-9a50b142ecbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".h files\Simulation objects\Processes">
+      <UniqueIdentifier>{ac5aa9ae-e026-4511-8ab3-80704881ea99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".h files\Simulation objects\Other">
+      <UniqueIdentifier>{15267b70-41fe-42b1-b319-2a306606550c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".h files\Event&amp;Process&amp;Agenda">
+      <UniqueIdentifier>{c5f221ef-f586-4bd2-aeac-1f9f91be8cc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".cpp files\Generators">
+      <UniqueIdentifier>{1013a670-1909-4808-a6ee-bf8b40528142}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".cpp files\Event&amp;Process&amp;Agenda">
+      <UniqueIdentifier>{13c78389-dcc1-47a9-b494-32214c2662fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".cpp files\Simulation objects">
+      <UniqueIdentifier>{1e1cd4c6-07d5-4738-89a2-d8ac602c7922}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".cpp files\Simulation objects\Other">
+      <UniqueIdentifier>{7e39aaf9-7d12-469b-9065-3baf5a10fe34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".cpp files\Simulation objects\Processes">
+      <UniqueIdentifier>{e833bc35-c2e4-4aa8-9026-7a5fe851f7b1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="process.h">
+      <Filter>.h files\Event&amp;Process&amp;Agenda</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Main Header</Filter>
+    </ClInclude>
+    <ClInclude Include="event.h">
+      <Filter>.h files\Event&amp;Process&amp;Agenda</Filter>
+    </ClInclude>
+    <ClInclude Include="patient.h">
+      <Filter>.h files\Simulation objects\Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="bloodCentre.h">
+      <Filter>.h files\Simulation objects\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="donator.h">
+      <Filter>.h files\Simulation objects\Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="AgendaList.h">
+      <Filter>.h files\Event&amp;Process&amp;Agenda</Filter>
+    </ClInclude>
+    <ClInclude Include="bloodSample.h">
+      <Filter>.h files\Simulation objects\Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="bloodStorage.h">
+      <Filter>.h files\Simulation objects\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="delivery.h">
+      <Filter>.h files\Simulation objects\Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="generator_01.h">
+      <Filter>.h files\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="generator_Exponential.h">
+      <Filter>.h files\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="generator_Gauss.h">
+      <Filter>.h files\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="generator_Bernoulli.h">
+      <Filter>.h files\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="generator_Geometrical.h">
+      <Filter>.h files\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="stats.h">
+      <Filter>.h files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Symulacja_v3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generator_01.cpp">
+      <Filter>.cpp files\Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="generator_Exponential.h.cpp">
+      <Filter>.cpp files\Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="generator_Gauss.cpp">
+      <Filter>.cpp files\Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="generator_Bernoulli.cpp">
+      <Filter>.cpp files\Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="generator_Geometrical.cpp">
+      <Filter>.cpp files\Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="process.cpp">
+      <Filter>.cpp files\Event&amp;Process&amp;Agenda</Filter>
+    </ClCompile>
+    <ClCompile Include="event.cpp">
+      <Filter>.cpp files\Event&amp;Process&amp;Agenda</Filter>
+    </ClCompile>
+    <ClCompile Include="bloodStorage.cpp">
+      <Filter>.cpp files\Simulation objects\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="bloodSample.cpp">
+      <Filter>.cpp files\Simulation objects\Processes</Filter>
+    </ClCompile>
+    <ClCompile Include="donator.cpp">
+      <Filter>.cpp files\Simulation objects\Processes</Filter>
+    </ClCompile>
+    <ClCompile Include="patient.cpp">
+      <Filter>.cpp files\Simulation objects\Processes</Filter>
+    </ClCompile>
+    <ClCompile Include="bloodCentre.cpp">
+      <Filter>.cpp files\Simulation objects\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="delivery.cpp">
+      <Filter>.cpp files\Simulation objects\Processes</Filter>
+    </ClCompile>
+    <ClCompile Include="AgendaList.cpp">
+      <Filter>.cpp files\Event&amp;Process&amp;Agenda</Filter>
+    </ClCompile>
+    <ClCompile Include="stats.cpp">
+      <Filter>.cpp files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
