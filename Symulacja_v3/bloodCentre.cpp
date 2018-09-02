@@ -33,11 +33,12 @@ bloodCentre::bloodCentre(double genNormalTransportStart, double genNormalTranspo
 	generatorForDonators = new generator_Exponential(genDonatorsStart, genDonatorsMean);
 	generatorForBloodSamplesNeeded = new generator_Geometrical(genSamplesNeededMean, genSamplesNeededStart);
 	generatorForResearch = new generator_5_10(genResearchStart);
-	generatorForBloodGroupPatients = new generator_Bernoulli(0.4, genBGPatientsStart);
-	generatorForBloodGroupDonators = new generator_Bernoulli(0.4, genBGDonatorsStart);
+	generatorForBloodGroupPatients = new generator_Bernoulli(0.6, genBGPatientsStart);
+	generatorForBloodGroupDonators = new generator_Bernoulli(0.6, genBGDonatorsStart);
 
 	storage = new bloodStorage(this);
-	transfusionPoint = nullptr;
+	transfusionPointA = nullptr;
+	transfusionPointB = nullptr;
 
 	//Do statystyk
 	patients = 0;

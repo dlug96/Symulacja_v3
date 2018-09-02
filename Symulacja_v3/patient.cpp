@@ -23,8 +23,15 @@ patient::patient(int howMany, bloodCentre * goHere, AgendaList * List, double *w
 
 void patient::Execute()
 {
-	std::cout << "Przybyl nowy pacjent" << std::endl;
-	whereToGo->queueOfPatients.push(this);
+	std::cout << "Przybyl nowy pacjent ";
+	if (bloodGroup) {
+		whereToGo->queueOfPatientsA.push(this);
+		std::cout << "z grupa krwi A" << std::endl;
+	}
+	else {
+		whereToGo->queueOfPatientsB.push(this);
+		std::cout << "z grupa krwi B" << std::endl;
+	}
 	whereToGo->patients += 1;
 	patient *nextPatient = new patient(whereToGo->generatorForBloodSamplesNeeded->generate_Geometrical(), whereToGo, Agenda, clock);
 	double when = whereToGo->generatorForPatients->generate_Exponential();

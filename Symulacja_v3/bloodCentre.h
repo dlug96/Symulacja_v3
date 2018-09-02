@@ -8,8 +8,11 @@ class bloodCentre
 public:
 
 	bloodStorage *storage;					//Magazyn jednostek krwi
-	patient *transfusionPoint;				//Punkt transfuzji
-	std::queue<patient*> queueOfPatients;   //Kolejka pacjentów
+	patient *transfusionPointA;				//Punkty transfuzji
+	patient *transfusionPointB;
+
+	std::queue<patient*> queueOfPatientsA;   //Kolejka pacjentów
+	std::queue<patient*> queueOfPatientsB;
 
 	double *clock;
 	AgendaList *Agenda;

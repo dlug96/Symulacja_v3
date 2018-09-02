@@ -24,7 +24,7 @@ void delivery::Execute() {
 		std::cout << "Przybyla dostawa awaryjna" << std::endl;
 		if(bloodGroup)storage->urgentFlagA = false;
 		else storage->urgentFlagB = false;
-		howManyToAdd = 12;
+		howManyToAdd = 60;
 		TTL = 500.0;
 	}
 	else {
@@ -39,7 +39,6 @@ void delivery::Execute() {
 		if(bloodGroup)storage->listOfSamplesGroupA->addToList(TTL, true);
 		else storage->listOfSamplesGroupB->addToList(TTL, false);
 	}
-	storage->howManySamples += howManyToAdd;
 
 	std::cout << "Dodano " << howManyToAdd << " jednostek krwi";
 	if (bloodGroup)std::cout << " grupy A" << std::endl;
