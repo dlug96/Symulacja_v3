@@ -12,5 +12,5 @@ public:
 
 	void Execute();
 
-	delivery(bool deliveryType, bloodStorage *whereToDeliver, double *clock_adr, AgendaList *List);
+	delivery(bool deliveryType, bool groupOfBlood, bloodStorage *whereToDeliver, double *clock_adr, AgendaList *List);
 };

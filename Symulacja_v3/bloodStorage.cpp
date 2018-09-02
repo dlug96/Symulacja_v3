@@ -6,18 +6,24 @@
 
 bloodStorage::bloodStorage(bloodCentre *hereYouAre) {
 	whereAmI = hereYouAre;
-	urgentFlag = false;
-	normalFlag = false;
+	urgentFlagA = false;
+	normalFlagA = false;
+	urgentFlagB = false;
+	normalFlagB = false;
 	howManySamples = 0;
-	listOfSamples = new bloodSample(-1.0, this, whereAmI->clock, whereAmI->Agenda);
+	listOfSamplesGroupA = new bloodSample(-1.0, true, this, whereAmI->clock, whereAmI->Agenda);
+	listOfSamplesGroupB = new bloodSample(-1.0, false, this, whereAmI->clock, whereAmI->Agenda);
 }
 
-int bloodStorage::countSamples() {
+int bloodStorage::countSamples(bool groupOfBlood) {
 	bloodSample *helper = nullptr;
+	bloodSample *list;
+	if (groupOfBlood)list = listOfSamplesGroupA;
+	else list = listOfSamplesGroupB;
 	int counter = 0;
-	if (listOfSamples->next == nullptr)return 0;
+	if (list->next == nullptr)return 0;
 	else {
-		helper = listOfSamples->next;
+		helper = list->next;
 		counter = 1;
 	}
 
@@ -25,6 +31,11 @@ int bloodStorage::countSamples() {
 		counter += 1;
 		helper = helper->next;
 	}
+
+	list = nullptr;
+	delete list;
+	helper = nullptr;
+	delete helper;
 
 	return counter;
 }

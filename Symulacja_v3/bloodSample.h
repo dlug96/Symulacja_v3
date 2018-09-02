@@ -14,10 +14,10 @@ public:
 
 	void Execute();
 
-	void addToList(double TTL);
+	void addToList(double TTL, bool groupOfBlood);
 
 	void removeFromList();
 
-	bloodSample(double TTL, bloodStorage *whereIsStorage, double *clock_adr, AgendaList *List);
+	bloodSample(double TTL, bool groupofBlood,bloodStorage *whereIsStorage, double *clock_adr, AgendaList *List);
 
 };

@@ -14,7 +14,8 @@ public:
 	double *clock;
 	AgendaList *Agenda;
 
-	research *researchFlag;
+	research *researchFlagA;
+	research *researchFlagB;
 
 	int patients;
 	int urgdeliveries;
@@ -34,6 +35,10 @@ public:
 
 	generator_5_10 *generatorForResearch;
 
+	generator_Bernoulli *generatorForBloodGroupPatients;
+
+	generator_Bernoulli *generatorForBloodGroupDonators;
+
 
 	bloodCentre(double genNormalTransportStart, double genNormalTransportStartMean,
 		double genUrgentTransportStart, double genUrgentTransportMean, double genUrgentTransportVar,
@@ -41,5 +46,7 @@ public:
 		double genDonatorsStart, double genDonatorsMean, 
 		double genSamplesNeededStart, double genSamplesNeededMean,
 		double genResearchStart,
+		double genBGPatientsStart,
+		double genBGDonatorsStart,
 		double *whereIsClock, AgendaList *List, double *clock_adr);
 };

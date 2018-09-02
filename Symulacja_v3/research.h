@@ -11,5 +11,5 @@ public:
 
 	void Execute();
 
-	research(bloodCentre *goHere, AgendaList *List, double *whereIsClock);
+	research(bloodCentre *goHere, bool groupOfBlood,AgendaList *List, double *whereIsClock);
 };

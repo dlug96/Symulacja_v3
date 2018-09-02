@@ -17,12 +17,15 @@ bloodCentre::bloodCentre(double genNormalTransportStart, double genNormalTranspo
 	double genDonatorsStart, double genDonatorsMean, 
 	double genSamplesNeededStart, double genSamplesNeededMean,
 	double genResearchStart,
+	double genBGPatientsStart,
+	double genBGDonatorsStart,
 	double *whereIsClock, AgendaList *List, double *clock_adr)
 {
 	Agenda = List;
 	clock = clock_adr;
 
-	researchFlag = nullptr;
+	researchFlagA = nullptr;
+	researchFlagB = nullptr;
 
 	generatorForNormalTransport = new generator_Exponential(genNormalTransportStart, genNormalTransportStartMean);
 	generatorForUrgentTransport = new generator_Gauss(genUrgentTransportMean, genUrgentTransportVar, genUrgentTransportStart);
@@ -30,6 +33,8 @@ bloodCentre::bloodCentre(double genNormalTransportStart, double genNormalTranspo
 	generatorForDonators = new generator_Exponential(genDonatorsStart, genDonatorsMean);
 	generatorForBloodSamplesNeeded = new generator_Geometrical(genSamplesNeededMean, genSamplesNeededStart);
 	generatorForResearch = new generator_5_10(genResearchStart);
+	generatorForBloodGroupPatients = new generator_Bernoulli(0.4, genBGPatientsStart);
+	generatorForBloodGroupDonators = new generator_Bernoulli(0.4, genBGDonatorsStart);
 
 	storage = new bloodStorage(this);
 	transfusionPoint = nullptr;

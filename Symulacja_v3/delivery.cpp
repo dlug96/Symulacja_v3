@@ -8,10 +8,11 @@
 #include "bloodStorage.h"
 #include "bloodSample.h"
 
-delivery::delivery(bool deliveryType, bloodStorage * whereToDeliver, double * clock_adr, AgendaList * List) :process(clock_adr, List)
+delivery::delivery(bool deliveryType, bool groupOfBlood, bloodStorage * whereToDeliver, double * clock_adr, AgendaList * List) :process(clock_adr, List)
 {
 	typeOfDelivery = deliveryType;
 	storage = whereToDeliver;
+	bloodGroup = groupOfBlood;
 }
 
 void delivery::Execute() {
@@ -21,20 +22,26 @@ void delivery::Execute() {
 
 	if (typeOfDelivery) {
 		std::cout << "Przybyla dostawa awaryjna" << std::endl;
-		storage->urgentFlag = false;
+		if(bloodGroup)storage->urgentFlagA = false;
+		else storage->urgentFlagB = false;
 		howManyToAdd = 12;
 		TTL = 500.0;
 	}
 	else {
 		std::cout << "Przybyla dostawa normalna" << std::endl;
-		storage->normalFlag = false;
+		if (bloodGroup)storage->normalFlagA = false;
+		else storage->normalFlagB = false;
 		howManyToAdd = 25;
 		TTL = 300.0;
 	}
 
 	for (int i = 0; i < howManyToAdd; i++) {
-		storage->listOfSamples->addToList(TTL);
+		if(bloodGroup)storage->listOfSamplesGroupA->addToList(TTL, true);
+		else storage->listOfSamplesGroupB->addToList(TTL, false);
 	}
 	storage->howManySamples += howManyToAdd;
-	std::cout << "Dodano " << howManyToAdd << " jednostek krwi" << std::endl;
+
+	std::cout << "Dodano " << howManyToAdd << " jednostek krwi";
+	if (bloodGroup)std::cout << " grupy A" << std::endl;
+	else std::cout << " grupy B" << std::endl;
 }

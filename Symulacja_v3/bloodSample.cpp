@@ -7,12 +7,13 @@
 #include "event.h"
 #include "bloodStorage.h"
 
-bloodSample::bloodSample(double TTL, bloodStorage *whereIsStorage, double *clock_adr, AgendaList *List) :process(clock_adr, List) {
+bloodSample::bloodSample(double TTL, bool groupofBlood,bloodStorage *whereIsStorage, double *clock_adr, AgendaList *List) :process(clock_adr, List) {
 	timeToLive = TTL;
 	myEvent->eventTime = TTL;
 	next = nullptr;
 	previous = nullptr;
 	storage = whereIsStorage;
+	bloodGroup = groupofBlood;
 }
 
 void bloodSample::removeFromList()
@@ -29,9 +30,9 @@ void bloodSample::removeFromList()
 }
 
 
-void bloodSample::addToList(double TTL) 
+void bloodSample::addToList(double TTL, bool groupOfBlood) 
 {
-	bloodSample *toAdd = new bloodSample(TTL, storage, storage->whereAmI->clock,storage->whereAmI->Agenda);	//Próbka do dodania
+	bloodSample *toAdd = new bloodSample(TTL, groupOfBlood,storage, storage->whereAmI->clock,storage->whereAmI->Agenda);	//Próbka do dodania
 	toAdd->Activate(toAdd->myEvent->eventTime);									//Zaplanowanie utylizacji
 	bloodSample *helper = this;
 

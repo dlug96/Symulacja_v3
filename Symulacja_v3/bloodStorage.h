@@ -5,15 +5,18 @@
 class bloodStorage
 {
 public:
-	bloodSample * listOfSamples;
+	bloodSample * listOfSamplesGroupA;
+	bloodSample * listOfSamplesGroupB;
 	int howManySamples;
 
 	bloodCentre *whereAmI;
 
-	bool urgentFlag;
-	bool normalFlag;
+	bool urgentFlagA;
+	bool normalFlagA;
+	bool urgentFlagB;
+	bool normalFlagB;
 
 	bloodStorage(bloodCentre *hereYouAre);
-	int countSamples();
+	int countSamples(bool groupOfBlood);
 };
 

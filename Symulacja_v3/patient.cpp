@@ -17,6 +17,8 @@ patient::patient(int howMany, bloodCentre * goHere, AgendaList * List, double *w
 {
 	bloodNeeded = howMany;
 	whereToGo = goHere;
+	if (whereToGo->generatorForBloodGroupPatients->generate_Bernoulli() == 1)bloodGroup = true;
+	else bloodGroup = false;
 }
 
 void patient::Execute()
