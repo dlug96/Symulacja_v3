@@ -1,2 +1,10 @@
 ﻿  Symulacja_v3.cpp
+  bloodCentre.cpp
+  bloodSample.cpp
+  bloodStorage.cpp
+  delivery.cpp
+  donator.cpp
+  patient.cpp
+  research.cpp
+  Generating Code...
   Symulacja_v3.vcxproj -> C:\Users\Dominik Ługowski\Desktop\Studia\Sem VI\Symulacja\II termin\Symulacja_v3\Debug\Symulacja_v3.exe

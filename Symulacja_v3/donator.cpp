@@ -15,6 +15,7 @@ donator::donator(bloodCentre *goHere, AgendaList *List, double *whereIsClock) :p
 
 void donator::Execute() {
 	std::cout << "Przybyl nowy dawca" << std::endl;
+	whereToGo->donators += 1;
 	whereToGo->storage->listOfSamples->addToList(300.0);
 	donator *nextDonator = new donator(whereToGo, Agenda, clock);
 	nextDonator->Activate(whereToGo->generatorForDonators->generate_Exponential());

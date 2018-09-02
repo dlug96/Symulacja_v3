@@ -8,24 +8,37 @@
 #include "generator_Exponential.h"
 #include "generator_Gauss.h"
 #include "generator_Geometrical.h"
+#include "generator_5_10.h"
+#include "research.h"
 
-bloodCentre::bloodCentre(double genNormalTransportStart, double genNormalTransportStartMean, double genUrgentTransportStart, double genUrgentTransportMean, double genUrgentTransportVar, double genPatientsStart, double genPatientsMean, double genDonatorsStart, double genDonatorsMean, double genSamplesNeededStart, double genSamplesNeededMean, double *whereIsClock, AgendaList *List, double *clock_adr)
+bloodCentre::bloodCentre(double genNormalTransportStart, double genNormalTransportStartMean, 
+	double genUrgentTransportStart, double genUrgentTransportMean, double genUrgentTransportVar, 
+	double genPatientsStart, double genPatientsMean, 
+	double genDonatorsStart, double genDonatorsMean, 
+	double genSamplesNeededStart, double genSamplesNeededMean,
+	double genResearchStart,
+	double *whereIsClock, AgendaList *List, double *clock_adr)
 {
 	Agenda = List;
 	clock = clock_adr;
+
+	researchFlag = nullptr;
 
 	generatorForNormalTransport = new generator_Exponential(genNormalTransportStart, genNormalTransportStartMean);
 	generatorForUrgentTransport = new generator_Gauss(genUrgentTransportMean, genUrgentTransportVar, genUrgentTransportStart);
 	generatorForPatients = new generator_Exponential(genPatientsStart, genPatientsMean);
 	generatorForDonators = new generator_Exponential(genDonatorsStart, genDonatorsMean);
 	generatorForBloodSamplesNeeded = new generator_Geometrical(genSamplesNeededMean, genSamplesNeededStart);
+	generatorForResearch = new generator_5_10(genResearchStart);
 
 	storage = new bloodStorage(this);
 	transfusionPoint = nullptr;
 
 	//Do statystyk
-	int patients = 0;
-	int urgdeliveries = 0;
-	int nordeliveries = 0;
+	patients = 0;
+	urgdeliveries = 0;
+	nordeliveries = 0;
+	donators = 0;
+	researches = 0;
 
 }

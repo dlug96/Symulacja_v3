@@ -7,6 +7,7 @@ class donator :public process
 {
 public:
 	bloodCentre *whereToGo;
+	bool bloodGroup;
 
 	void Execute();
 

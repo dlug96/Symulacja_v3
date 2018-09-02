@@ -10,6 +10,7 @@ public:
 	bloodSample *next;
 	bloodSample *previous;
 	bloodStorage *storage;
+	bool bloodGroup;
 
 	void Execute();
 

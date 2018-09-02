@@ -10,6 +10,7 @@ class donator;
 class bloodSample;
 class bloodStorage;
 class delivery;
+class research;
 
 
 //Generatory
@@ -18,6 +19,4 @@ class generator_Exponential;
 class generator_Geometrical;
 class generator_Gauss;
 class generator_Bernoulli;
-
-//Statystyki
-class stats;
+class generator_5_10;

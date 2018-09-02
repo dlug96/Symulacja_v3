@@ -108,6 +108,12 @@
     <ClInclude Include="stats.h">
       <Filter>.h files</Filter>
     </ClInclude>
+    <ClInclude Include="research.h">
+      <Filter>.h files\Simulation objects\Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="generator_5_10.h">
+      <Filter>.h files\Generators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -160,6 +166,12 @@
     </ClCompile>
     <ClCompile Include="stats.cpp">
       <Filter>.cpp files</Filter>
+    </ClCompile>
+    <ClCompile Include="research.cpp">
+      <Filter>.cpp files\Simulation objects\Processes</Filter>
+    </ClCompile>
+    <ClCompile Include="generator_5_10.cpp">
+      <Filter>.cpp files\Generators</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

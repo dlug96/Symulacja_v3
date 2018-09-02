@@ -14,9 +14,13 @@ public:
 	double *clock;
 	AgendaList *Agenda;
 
+	research *researchFlag;
+
 	int patients;
 	int urgdeliveries;
 	int nordeliveries;
+	int donators;
+	int researches;
 
 	generator_Exponential *generatorForNormalTransport;
 
@@ -28,11 +32,14 @@ public:
 
 	generator_Geometrical *generatorForBloodSamplesNeeded;
 
+	generator_5_10 *generatorForResearch;
+
 
 	bloodCentre(double genNormalTransportStart, double genNormalTransportStartMean,
 		double genUrgentTransportStart, double genUrgentTransportMean, double genUrgentTransportVar,
 		double genPatientsStart, double genPatientsMean, 
 		double genDonatorsStart, double genDonatorsMean, 
-		double genSamplesNeededStart, double genSamplesNeededMean, 
+		double genSamplesNeededStart, double genSamplesNeededMean,
+		double genResearchStart,
 		double *whereIsClock, AgendaList *List, double *clock_adr);
 };

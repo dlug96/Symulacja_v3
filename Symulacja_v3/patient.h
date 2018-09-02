@@ -8,6 +8,7 @@ class patient :public process
 public:
 	int bloodNeeded;
 	bloodCentre *whereToGo;
+	bool bloodGroup;
 
 	void Execute();
 

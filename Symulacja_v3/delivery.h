@@ -8,6 +8,7 @@ class delivery :public process
 public:
 	bool typeOfDelivery;	//true - urgent, false - normal
 	bloodStorage *storage;
+	bool bloodGroup;
 
 	void Execute();
 
